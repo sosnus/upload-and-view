@@ -10,6 +10,7 @@ class Upload:
         return """<html><head></head><body>
 <form method="POST" enctype="multipart/form-data" action="">
 <input type="file" name="myfile" />
+<br/>
 <input type="text" name="folder" />
 <br/>
 <input type="submit" />
@@ -19,6 +20,10 @@ class Upload:
     def POST(self):
         x = web.input(myfile={})
         timestamp = web.input().folder 
+        print(type(timestamp))
+        print(timestamp)
+        print(x.myfile.filename)
+        print(x.myfile.filename.split('/')[-1])
         # filedir = '/Users/stanislawpulawski/data/test/dev/null/stom' # change this to the directory you want to store the file in.
         # filedir = '/home/zombie/data/minio/stom' # change this to the directory you want to store the file in.
         filedir = '/data/minio/stom' # change this to the directory you want to store the file in.
