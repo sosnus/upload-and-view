@@ -26,6 +26,7 @@ class Upload:
         print(x.myfile.filename.split('/')[-1])
         # filedir = '/Users/stanislawpulawski/data/test/dev/null/stom' # change this to the directory you want to store the file in.
         # filedir = '/home/zombie/data/minio/stom' # change this to the directory you want to store the file in.
+        # filedir = '/home/metis/data/miniostom/stom' # change this to the directory you want to store the file in.
         filedir = '/data/minio/stom' # change this to the directory you want to store the file in.
         os.system("cd {} && mkdir {}".format(filedir, timestamp))
         if 'myfile' in x: # to check if the file-object is created
